@@ -1,0 +1,29 @@
+import Restaurante from '../../models/Restaurant'
+import MRestaurante from '../Restaurante'
+import { List, Title } from './styles'
+
+export type Props = {
+  title: string
+  rests: Restaurante[]
+}
+const RestaurantesList = ({ title, rests }: Props) => (
+  <section>
+    <div className="container">
+      <Title>{title}</Title>
+      <List>
+        {rests.map((restaurante) => (
+          <MRestaurante
+            key={restaurante.id}
+            description={restaurante.description}
+            image={restaurante.image}
+            infos={restaurante.infos}
+            nota={restaurante.nota}
+            title={restaurante.title}
+          />
+        ))}
+      </List>
+    </div>
+  </section>
+)
+
+export default RestaurantesList

@@ -2,7 +2,7 @@ import Baner from '../../components/Banner'
 
 const Home = () => (
   <>
-    <Baner />
+    <Baner type="home" />
   </>
 )
 
