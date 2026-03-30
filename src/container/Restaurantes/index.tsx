@@ -9,7 +9,7 @@ const MelhoresRestaurantes: Restaurante[] = [
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
     title: 'Hioki Sushi',
     nota: 4.9,
-    infos: ['17/05'],
+    infos: ['Destaques da semana', 'Japonesa'],
     image: sushi
   },
   {
@@ -18,7 +18,43 @@ const MelhoresRestaurantes: Restaurante[] = [
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
     title: 'Hioki Sushi',
     nota: 4.9,
-    infos: ['17/05'],
+    infos: ['Japonesa'],
+    image: sushi
+  },
+  {
+    id: 3,
+    description:
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+    title: 'Hioki Sushi',
+    nota: 4.9,
+    infos: ['Japonesa'],
+    image: sushi
+  },
+  {
+    id: 4,
+    description:
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+    title: 'Hioki Sushi',
+    nota: 4.9,
+    infos: ['Japonesa'],
+    image: sushi
+  },
+  {
+    id: 5,
+    description:
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+    title: 'Hioki Sushi',
+    nota: 4.9,
+    infos: ['Japonesa'],
+    image: sushi
+  },
+  {
+    id: 6,
+    description:
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+    title: 'Hioki Sushi',
+    nota: 4.9,
+    infos: ['Japonesa'],
     image: sushi
   }
 ]

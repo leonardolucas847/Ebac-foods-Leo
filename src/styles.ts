@@ -3,9 +3,10 @@ import { createGlobalStyle } from 'styled-components'
 export const cores = {
   vermelho: '#e66767',
   branco: '#ffffff',
-  cinza: '#333',
-  verde: '#10AC84',
-  cinzaClaro: '#A3A3A3'
+  amarelo: '#ffebd9',
+  icon: '#ffb930',
+  cinza: '#a0a1a1ff',
+  fundo: '#fff8f2'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -15,6 +16,7 @@ export const GlobalCss = createGlobalStyle`
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     list-style: none;
+    background-color: ${cores.fundo};
   }
 
     .container {

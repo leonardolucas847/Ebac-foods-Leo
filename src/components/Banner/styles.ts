@@ -2,10 +2,6 @@ import { styled } from 'styled-components'
 import { cores } from '../../styles'
 import imagemBaner from '../../assets/imagem-do-baner.png'
 
-type Props = {
-  fraseLayout: 'frase' | 'nomeRestaurante'
-}
-
 export const BannerLayout = styled.section`
   width: 100%;
   height: 440px;
@@ -49,13 +45,17 @@ export const Frase = styled.p`
   color: ${cores.vermelho};
   max-width: 640px;
   width: 100%;
-
+  background-color: transparent;
   position: absolute;
   left: 50%;
   top: 90%;
   font-size: 36px;
   transform: translate(-50%, -100%);
   text-align: center;
+  @media (max-width: 1024px) {
+    font-size: 24px;
+    max-width: 480px;
+  }
 `
 
 export const LogoEfood = styled.img`
@@ -66,6 +66,10 @@ export const LogoEfood = styled.img`
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
+  @media (max-width: 1024px) {
+    height: 84px;
+    top: 80px;
+  }
 `
 export const Detalhes = styled.div`
   display: flex;
