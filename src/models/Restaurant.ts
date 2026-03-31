@@ -1,3 +1,5 @@
+import Prato from './Prato'
+
 class Restaurant {
   title: string
   description: string
@@ -5,6 +7,7 @@ class Restaurant {
   image: string
   nota: number
   id: number
+  pratos: Prato[]
 
   constructor(
     id: number,
@@ -12,7 +15,8 @@ class Restaurant {
     description: string,
     image: string,
     infos: string[],
-    title: string
+    title: string,
+    pratos: Prato[]
   ) {
     this.id = id
     this.nota = nota
@@ -20,6 +24,7 @@ class Restaurant {
     this.image = image
     this.infos = infos
     this.title = title
+    this.pratos = pratos
   }
 }
 

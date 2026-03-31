@@ -1,4 +1,5 @@
 import { cores } from '../../styles'
+import Restaurant from '../../models/Restaurant'
 import {
   Card,
   Descricao,
@@ -10,16 +11,17 @@ import {
 } from './styles'
 import { FaStar } from 'react-icons/fa'
 import Tag from '../Tag'
+import { Link } from 'react-router-dom'
 
-export type Props = {
-  title: string
-  description: string
-  infos: string[]
-  image: string
-  nota: number
-}
-
-const MRestaurante = ({ title, description, image, nota, infos }: Props) => (
+const MRestaurante = ({
+  title,
+  id,
+  description,
+  image,
+  pratos,
+  nota,
+  infos
+}: Restaurant) => (
   <Card>
     <Image style={{ backgroundImage: `url(${image})` }}>
       <Infos>
@@ -42,7 +44,14 @@ const MRestaurante = ({ title, description, image, nota, infos }: Props) => (
     <Descricao>{description}</Descricao>
     <Botao>
       <Tag size="big">
-        <a href="#">Saiba Mais</a>
+        <Link
+          to={`/restaurante/${id}`}
+          state={{
+            restaurante: { id, title, description, image, nota, infos, pratos }
+          }}
+        >
+          Saiba Mais
+        </Link>
       </Tag>
     </Botao>
   </Card>

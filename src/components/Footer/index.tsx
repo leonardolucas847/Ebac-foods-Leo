@@ -2,17 +2,7 @@ import insta from '../../assets/instagram-icon.png'
 import face from '../../assets/facebook-icon.png'
 import twitter from '../../assets/twitter-2-icon.png'
 
-import {
-  Container,
-  FooterSection,
-  Link,
-  LinksRS,
-  LogoFooter,
-  Mesage,
-  SectionTitle
-} from './styles'
-import { LogoEfood } from '../Banner/styles'
-const currentYear = new Date().getFullYear()
+import { Container, Link, LinksRS, LogoFooter, Mesage } from './styles'
 import logo from '../../assets/logo.svg'
 const Footer = () => (
   <Container>

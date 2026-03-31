@@ -1,16 +1,18 @@
+import { BrowserRouter } from 'react-router-dom'
 import Footer from './components/Footer'
-import Home from './container/Home'
-import RestaurantesHome from './container/Restaurantes'
+import Rotas from './routes'
 import { GlobalCss } from './styles'
+import { CarrinhoProvider } from './contexts/CarrinhoContext'
 
 function App() {
   return (
-    <>
-      <GlobalCss />
-      <Home />
-      <RestaurantesHome />
-      <Footer />
-    </>
+    <CarrinhoProvider>
+      <BrowserRouter>
+        <GlobalCss />
+        <Rotas />
+        <Footer />
+      </BrowserRouter>
+    </CarrinhoProvider>
   )
 }
 

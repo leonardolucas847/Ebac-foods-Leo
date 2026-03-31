@@ -1,7 +1,6 @@
 import Restaurante from '../../models/Restaurant'
 import MRestaurante from '../Restaurante'
 import { List, Section, Title } from './styles'
-
 export type Props = {
   title: string
   rests: Restaurante[]
@@ -19,6 +18,8 @@ const RestaurantesList = ({ title, rests }: Props) => (
             infos={restaurante.infos}
             nota={restaurante.nota}
             title={restaurante.title}
+            id={restaurante.id}
+            pratos={restaurante.pratos}
           />
         ))}
       </List>
