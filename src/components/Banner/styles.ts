@@ -40,6 +40,10 @@ export const CardImagem = styled.div`
     position: relative;
     padding-top: 24px;
     padding-bottom: 32px;
+    @media (max-width: 1024px) {
+      font-size: 24px;
+      margin-left: 15%;
+    }
   }
 `
 
@@ -69,8 +73,9 @@ export const LogoEfood = styled.img`
   left: 50%;
   transform: translateX(-50%);
   @media (max-width: 1024px) {
-    height: 84px;
-    top: 80px;
+    left: 26%;
+    top: 20px;
+    height: 48px;
   }
 `
 export const Detalhes = styled.div`
@@ -81,7 +86,16 @@ export const Detalhes = styled.div`
   width: 100%;
   margin: 0 auto;
   align-items: center;
-  pading: 0 20px;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    padding: 20px;
+
+    padding-top: 30px;
+    padding-bottom: 0px;
+    flex-direction: row;
+    align-items: flex;
+  }
 `
 export const Carrinho = styled.button`
   border: none;

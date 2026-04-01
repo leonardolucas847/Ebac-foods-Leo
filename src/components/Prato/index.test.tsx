@@ -1,6 +1,4 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import Restaurante from '../../models/Restaurant'
-import sushi from '../../assets/sushi.png'
 import PizzaMarguirita from '../../assets/pizzaCardapio.png'
 import PratoUnico from '.'
 

@@ -74,8 +74,8 @@ const Banner = ({ type }: Props) => {
           </S.CardImagem>
           <S.Detalhes>
             <S.VoltarHome to="/">Restaurantes</S.VoltarHome>
-            <S.LogoEfood src={`${logo}`} />
             <S.Carrinho onClick={openCart}>0 produto(s) no carrinho</S.Carrinho>
+            <S.LogoEfood src={`${logo}`} />
           </S.Detalhes>
         </div>
       </S.BannerLayout>
