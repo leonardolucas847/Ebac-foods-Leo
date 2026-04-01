@@ -7,6 +7,8 @@ type CarrinhoContextType = {
   adicionarItem: (item: Prato) => void
   removerItem: (index: number) => void
   SomarPrecos: (itens: Prato[]) => number
+  orderId: string
+  finalizarPedido: () => void
 }
 
 const CarrinhoContext = createContext<CarrinhoContextType>(
@@ -19,7 +21,12 @@ export const CarrinhoProvider = ({
   children: React.ReactNode
 }) => {
   const [itens, setItens] = useState<Prato[]>([])
-
+  const [orderId, setOrderId] = useState('')
+  const finalizarPedido = () => {
+    const id = `${Math.random().toString(36).substring(2, 8).toUpperCase()}`
+    setOrderId(id)
+    setItens([]) // limpa o carrinho depois de finalizar
+  }
   const adicionarItem = (item: Prato) => {
     setItens((prev) => [...prev, item])
   }
@@ -31,7 +38,14 @@ export const CarrinhoProvider = ({
   }
   return (
     <CarrinhoContext.Provider
-      value={{ itens, adicionarItem, removerItem, SomarPrecos }}
+      value={{
+        itens,
+        adicionarItem,
+        removerItem,
+        SomarPrecos,
+        orderId,
+        finalizarPedido
+      }}
     >
       {children}
     </CarrinhoContext.Provider>

@@ -4,7 +4,7 @@ import Cardapio from '../../components/Cardapio'
 import Restaurant from '../../models/Restaurant'
 
 const Cardapios = () => {
-  const { state } = useLocation()
+  const { state } = useLocation<{ restaurante: Restaurant }>()
   const restaurante: Restaurant = state?.restaurante
 
   return (

@@ -23,23 +23,33 @@ const Modal = ({ isOpen, onClose, children }: PropsModal) => {
   )
 }
 
-const Baner = ({ type }: Props) => {
+const Banner = ({ type }: Props) => {
   const [activeModal, setActiveModal] = useState<
-    'carrinho' | 'endereco' | 'pagamento' | null
+    'carrinho' | 'endereco' | 'pagamento' | 'confirmacao' | null
   >(null)
 
   const openCart = () => setActiveModal('carrinho')
   const openAddress = () => setActiveModal('endereco')
   const openPayment = () => setActiveModal('pagamento')
+  const openConfirmation = () => setActiveModal('confirmacao')
   const closeModal = () => setActiveModal(null)
-  const { itens, removerItem, SomarPrecos } = useCarrinho()
+  const Conclusao = () => {
+    closeModal()
+    alert('Pedido finalizado com sucesso!')
+  }
+  const ConfirmClick = () => {
+    finalizarPedido()
+    openConfirmation()
+  }
+  const { itens, removerItem, SomarPrecos, orderId, finalizarPedido } =
+    useCarrinho()
   if (type === 'home') {
     return (
       <S.BannerLayout style={{ backgroundImage: `url(${FundoGF})` }}>
         <div>
           <S.LogoEfood src={`${logo}`} />
           <S.Frase>
-            Viva experciências gastronômicas no conforto da sua casa
+            Viva expericiências gastronômicas no conforto da sua casa
           </S.Frase>
         </div>
       </S.BannerLayout>
@@ -168,6 +178,7 @@ const Baner = ({ type }: Props) => {
           </S.CampoNumber>
           <S.Buttons>
             <button
+              onClick={ConfirmClick}
               className="Next"
               type="button"
               style={{ marginTop: '24px' }}
@@ -180,7 +191,43 @@ const Baner = ({ type }: Props) => {
           </S.Buttons>
         </S.FormEntrega>
       </Modal>
+      <Modal
+        isOpen={activeModal === 'confirmacao'}
+        onClose={closeModal}
+        titulo=""
+      >
+        <S.ModalTitulo>Pedido Realizado - Código: {orderId}</S.ModalTitulo>
+        <S.Mesage>
+          <S.P>
+            Estamos felizes em informar que seu pedido já está em processo de
+            preparação e, em breve, será entregue no endereço fornecido
+          </S.P>
+          <S.P>
+            Gostaríamos de ressaltar que nossos entregadores não estão
+            autorizados a realizar cobranças extras.{' '}
+          </S.P>
+          <S.P>
+            Lembre-se da importância de higienizar as mãos após o recebimento do
+            pedido, garantindo assim sua segurança e bem-estar durante a
+            refeição.
+          </S.P>
+          <S.P>
+            Esperamos que desfrute de uma deliciosa e agradável experiência
+            gastronômica. Bom apetite!
+          </S.P>
+        </S.Mesage>
+        <S.Buttons>
+          <button
+            className="Next"
+            type="submit"
+            onClick={Conclusao}
+            style={{ marginTop: '8px' }}
+          >
+            Concluir
+          </button>
+        </S.Buttons>
+      </Modal>
     </>
   )
 }
-export default Baner
+export default Banner

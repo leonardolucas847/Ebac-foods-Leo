@@ -236,7 +236,7 @@ export const ModalTitulo = styled.h2`
   margin-left: 8px;
 `
 
-//  MODDAL N 2 --- relacionada a entrega
+//  MODDAL N 2 e N 3 --- relacionada a entrega e pagamento
 
 export const FormEntrega = styled.form`
   display: flex;
@@ -276,4 +276,16 @@ export const Buttons = styled.div`
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
+`
+//  MODDAL N 4 --- relacionada conclusao do pedido
+
+export const Mesage = styled.div`
+  margin-left: 8px;
+`
+export const P = styled.p`
+  color: ${cores.amarelo};
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 16px;
 `
