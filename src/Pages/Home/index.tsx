@@ -1,9 +1,9 @@
-import Baner from '../../components/Banner'
+import Banner from '../../components/Banner'
 import RestaurantesHome from '../../components/Restaurantes'
 
 const Home = () => (
   <>
-    <Baner type="home" />
+    <Banner type="home" />
     <RestaurantesHome />
   </>
 )

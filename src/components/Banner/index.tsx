@@ -49,7 +49,7 @@ const Banner = ({ type }: Props) => {
         <div>
           <S.LogoEfood src={`${logo}`} />
           <S.Frase>
-            Viva expericiências gastronômicas no conforto da sua casa
+            Viva experiências gastronômicas no conforto da sua casa
           </S.Frase>
         </div>
       </S.BannerLayout>
@@ -84,7 +84,7 @@ const Banner = ({ type }: Props) => {
         onClose={closeModal}
         titulo={''}
       >
-        {itens.map((item, index) => (
+        {itens?.map((item, index) => (
           <div className="div1" key={index}>
             <img src={item.imagePrato} alt={item.tituloPrato} />
             <div className="div2">
@@ -97,7 +97,13 @@ const Banner = ({ type }: Props) => {
           </div>
         ))}
         <S.Price>
-          Valor total <span>R$ {SomarPrecos(itens).toFixed(2)}</span>{' '}
+          Valor total{' '}
+          <span>
+            R${' '}
+            {typeof SomarPrecos === 'function'
+              ? SomarPrecos(itens).toFixed(2)
+              : '0.00'}
+          </span>{' '}
         </S.Price>
         <button className="Next" onClick={openAddress}>
           Continuar com a entrega
@@ -148,7 +154,10 @@ const Banner = ({ type }: Props) => {
         titulo=""
       >
         <S.ModalTitulo>
-          Pagamento - Valor a pagar: R$ {SomarPrecos(itens).toFixed(2)}
+          Pagamento - Valor a pagar: R${' '}
+          {typeof SomarPrecos === 'function'
+            ? SomarPrecos(itens).toFixed(2)
+            : '0.00'}
         </S.ModalTitulo>
         <S.FormEntrega>
           <S.Campo>

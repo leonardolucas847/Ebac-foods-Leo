@@ -83,7 +83,10 @@ export const Detalhes = styled.div`
   align-items: center;
   pading: 0 20px;
 `
-export const Carrinho = styled.a`
+export const Carrinho = styled.button`
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
   cursor: pointer;
   justify-content: center;
   display: inline-block;
