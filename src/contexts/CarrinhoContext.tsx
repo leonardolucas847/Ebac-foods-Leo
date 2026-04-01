@@ -6,6 +6,7 @@ type CarrinhoContextType = {
   itens: Prato[]
   adicionarItem: (item: Prato) => void
   removerItem: (index: number) => void
+  SomarPrecos: (itens: Prato[]) => number
 }
 
 const CarrinhoContext = createContext<CarrinhoContextType>(
@@ -25,8 +26,13 @@ export const CarrinhoProvider = ({
   const removerItem = (index: number) => {
     setItens((prev) => prev.filter((_, i) => i !== index)) // ← remove pelo índice
   }
+  const SomarPrecos = (itens: Prato[]) => {
+    return itens.reduce((total, item) => total + item.price, 0)
+  }
   return (
-    <CarrinhoContext.Provider value={{ itens, adicionarItem, removerItem }}>
+    <CarrinhoContext.Provider
+      value={{ itens, adicionarItem, removerItem, SomarPrecos }}
+    >
       {children}
     </CarrinhoContext.Provider>
   )

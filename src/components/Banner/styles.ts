@@ -122,10 +122,13 @@ export const Overlay = styled.div`
   align-items: center;
   z-index: 1000;
 `
+//  MODDAL N 1 --- relacionada ao carrinho
 export const ModalContainer = styled.div`
   list-style: none;
   font-size: 14px;
   position: fixed;
+  display: flex;
+  flex-direction: column;
 
   top: 0;
   right: 0;
@@ -143,13 +146,27 @@ export const ModalContainer = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
   }
-  div {
+  .Next {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px;
+    display: inline-block;
+    background-color: ${cores.amarelo};
+    color: ${cores.vermelho};
+    border: none;
+    @media (max-width: 1024px) {
+      top: 16px;
+    }
+  }
+
+  .div1 {
     height: 100px;
     position: relative;
     padding-left: 8px;
     display: flex;
     flex-direction: row;
-    margin: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     align-items: center;
     background-color: ${cores.amarelo};
     color: ${cores.vermelho};
@@ -159,9 +176,6 @@ export const ModalContainer = styled.div`
       object-fit: cover;
       flex-shrink: 0;
       @media (max-width: 1024px) {
-        max-width: 400px;
-        width: 100%;
-        height: auto;
         margin-right: 0px;
         margin-top: 16px;
       }
@@ -178,12 +192,14 @@ export const ModalContainer = styled.div`
         width: 16px;
       }
     }
-    div {
+
+    .div2 {
       display: flex;
       height: 100%;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      margin-left: 8px;
       h2 {
         font-size: 18px;
         font-weight: 900;
@@ -205,4 +221,59 @@ export const ModalContainer = styled.div`
       }
     }
   }
+`
+export const Price = styled.p`
+  color: ${cores.amarelo};
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+`
+export const ModalTitulo = styled.h2`
+  color: ${cores.amarelo};
+  margin-bottom: 16px;
+  margin-top: 32px;
+  margin-left: 8px;
+`
+
+//  MODDAL N 2 --- relacionada a entrega
+
+export const FormEntrega = styled.form`
+  display: flex;
+  flex-direction: column;
+`
+export const Campo = styled.div`
+  margin: 8px;
+  display: flex;
+  color: ${cores.amarelo};
+  font-weight: bold;
+  flex-direction: column;
+  input {
+    margin-top: 8px;
+    padding: 8px;
+    background-color: ${cores.amarelo};
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+`
+export const CampoNumber = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  gap: 8px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+`
+export const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px;
+  .Next {
+  text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
 `

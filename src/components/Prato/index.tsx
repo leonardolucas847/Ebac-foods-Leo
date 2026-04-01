@@ -25,13 +25,6 @@ const Modal = ({ isOpen, onClose, children }: Props) => {
     document.body
   )
 }
-const CardAAdicionar = ({ price, tituloPrato, imagePrato }: Prato) => (
-  <div>
-    <img src={imagePrato} alt={tituloPrato} />
-    <h2>{tituloPrato}</h2>
-    <p>R$ {price.toFixed(2)}</p>
-  </div>
-)
 
 const PratoUnico = ({
   tituloPrato,
