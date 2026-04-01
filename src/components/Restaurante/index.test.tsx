@@ -1,10 +1,8 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Restaurante from '../../models/Restaurant'
 import sushi from '../../assets/sushi.png'
 import PizzaMarguirita from '../../assets/pizzaCardapio.png'
 import { BrowserRouter } from 'react-router-dom'
-import PratoUnico from '.'
-import Prato from '../../models/Prato'
 import MRestaurante from '.'
 const restauranteTest: Restaurante = {
   id: 1,

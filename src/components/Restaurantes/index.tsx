@@ -180,10 +180,7 @@ const MelhoresRestaurantes: Restaurante[] = [
 
 const RestaurantesHome = () => (
   <ConteudoHome>
-    <RestaurantesList
-      title="OS melhores da semana"
-      rests={MelhoresRestaurantes}
-    />
+    <RestaurantesList rests={MelhoresRestaurantes} />
   </ConteudoHome>
 )
 
