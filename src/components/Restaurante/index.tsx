@@ -23,7 +23,7 @@ const MRestaurante = ({
   infos
 }: Restaurant) => (
   <Card>
-    <Image style={{ backgroundImage: `url(${image})` }}>
+    <Image style={{ backgroundImage: `url(${image})`, height: '217px' }}>
       <Infos>
         {infos.map((info) => (
           <Tag key={info}>{info}</Tag>

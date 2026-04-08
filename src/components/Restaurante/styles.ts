@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Card = styled.div`
-  max-width: 480px;
-  width: 100%;
-  height: 400px;
+  width: 472px;
+  background-color: ${cores.branco};
+
+  height: 398px;
 
   @media (max-width: 1024px) {
     width: 90%;
@@ -16,8 +17,8 @@ export const Card = styled.div`
 
 export const NomeNota = styled.div`
   background-color: ${cores.branco};
-  padding: 16px 8px;
-  padding-top: 8px;
+  padding: 8px;
+
   display: flex;
   font-weight: 800;
   justify-content: space-between;
@@ -30,9 +31,8 @@ export const NomeNota = styled.div`
 export const Image = styled.div`
   position: relative;
   z-index: 1;
-  max-width: 100%;
   width: 100%;
-  max-height: 280px;
+  height: 217px;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,8 +44,11 @@ export const Image = styled.div`
 `
 export const Descricao = styled.p`
   background-color: ${cores.branco};
-  padding: 16px 8px;
-  padding-top: 24px;
+  height: 88px;
+  margin: 8px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 8px;
   width: 100%;
   font-style: normal;
   font-weight: 400;
@@ -54,7 +57,7 @@ export const Descricao = styled.p`
 
   color: ${cores.vermelho};
   @media (max-width: 1024px) {
-    padding-bottom: 24px;
+    margin-bottom: 40px;
   }
 `
 
@@ -86,8 +89,8 @@ export const Infos = styled.div`
 `
 export const Botao = styled.div`
   background-color: ${cores.branco};
-  padding: 8px;
-  padding-top: 0;
+  padding-top: 8px;
+
   a {
     text-decoration: none;
     background-color: transparent;
