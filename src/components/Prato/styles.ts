@@ -47,7 +47,7 @@ export const DescricaoCardapio = styled.p`
 
 export const TituloCardapio = styled.h3`
   background-color: ${cores.vermelho};
-
+  padding-left: 8px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;

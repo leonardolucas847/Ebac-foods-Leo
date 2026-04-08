@@ -41,8 +41,15 @@ const Banner = ({ type }: Props) => {
     finalizarPedido()
     openConfirmation()
   }
-  const { itens, removerItem, SomarPrecos, orderId, finalizarPedido } =
-    useCarrinho()
+  const {
+    itens,
+    removerItem,
+    SomarPrecos,
+    orderId,
+    VoltarHome,
+    finalizarPedido,
+    numeroDeItensNoCarrinho
+  } = useCarrinho()
   if (type === 'home') {
     return (
       <S.BannerLayout style={{ backgroundImage: `url(${FundoGF})` }}>
@@ -71,9 +78,13 @@ const Banner = ({ type }: Props) => {
           </div>
         </S.CardImagem>
         <S.Detalhes className="container">
-          <S.VoltarHome to="/">Restaurantes</S.VoltarHome>
+          <S.VoltarHome to="/" onClick={VoltarHome}>
+            Restaurantes
+          </S.VoltarHome>
           <S.LogoEfood src={`${logo}`} />
-          <S.Carrinho onClick={openCart}>0 produto(s) no carrinho</S.Carrinho>
+          <S.Carrinho onClick={openCart}>
+            {numeroDeItensNoCarrinho} produto(s) no carrinho
+          </S.Carrinho>
         </S.Detalhes>
       </S.BannerLayout>
       <Modal
