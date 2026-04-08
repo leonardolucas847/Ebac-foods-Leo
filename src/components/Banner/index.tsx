@@ -54,7 +54,7 @@ const Banner = ({ type }: Props) => {
     return (
       <S.BannerLayout style={{ backgroundImage: `url(${FundoGF})` }}>
         <div>
-          <S.LogoEfood src={`${logo}`} />
+          <S.LogoEfood src={`${logo}`} style={{ paddingTop: '40px' }} />
           <S.Frase>
             Viva experiências gastronômicas no conforto da sua casa
           </S.Frase>
