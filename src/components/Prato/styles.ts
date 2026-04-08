@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Card = styled.div`
-  width: auto;
-  height: auto;
-  padding: 16px;
+  width: 320px;
+  height: 338px;
+
   background-color: ${cores.vermelho};
   @media (max-width: 1024px) {
     width: 90%;
@@ -16,9 +16,10 @@ export const Card = styled.div`
 
 export const ImageCardapio = styled.div`
   display: flex;
+  margin: 8px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
 
   height: 167px;
   background-repeat: no-repeat;
@@ -32,8 +33,9 @@ export const ImageCardapio = styled.div`
 export const DescricaoCardapio = styled.p`
   background-color: ${cores.vermelho};
   color: ${cores.amarelo};
-  padding: 8px;
-  width: 100%;
+  height: 88px;
+  margin: 8px;
+  width: 304px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -46,7 +48,7 @@ export const DescricaoCardapio = styled.p`
 
 export const TituloCardapio = styled.h3`
   background-color: ${cores.vermelho};
-  margin-top: 8px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -56,10 +58,11 @@ export const TituloCardapio = styled.h3`
 export const BotaoCarrinho = styled.button`
   background-color: ${cores.amarelo};
   color: ${cores.vermelho};
-  padding: 4px;
+  margin: 0 8px 8px 8px;
   font-weight: 700;
   text-align: center;
-  width: 100%;
+  width: 304px;
+  height: 24px;
   border: none;
   cursor: pointer;
   font-size: 14px;

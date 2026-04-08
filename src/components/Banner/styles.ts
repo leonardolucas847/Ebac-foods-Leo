@@ -66,12 +66,9 @@ export const Frase = styled.p`
 
 export const LogoEfood = styled.img`
   height: 64px;
-  display: inline-block;
+
   width: auto;
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+
   @media (max-width: 1024px) {
     left: 26%;
     top: 20px;
@@ -79,10 +76,11 @@ export const LogoEfood = styled.img`
   }
 `
 export const Detalhes = styled.div`
-  display: flex;
-  height: 160px;
-  justify-content: space-between;
-  padding: 20px 170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 32px;
+
   width: 100%;
   margin: 0 auto;
   align-items: center;
@@ -98,6 +96,7 @@ export const Detalhes = styled.div`
   }
 `
 export const Carrinho = styled.button`
+  text-align: center;
   border: none;
   background-color: transparent;
   font-weight: bold;

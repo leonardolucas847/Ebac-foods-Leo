@@ -72,10 +72,10 @@ const Banner = ({ type }: Props) => {
             </p>
             <p className="escrita">La Dolce Vita Trattoria</p>
           </S.CardImagem>
-          <S.Detalhes>
+          <S.Detalhes className="container">
             <S.VoltarHome to="/">Restaurantes</S.VoltarHome>
-            <S.Carrinho onClick={openCart}>0 produto(s) no carrinho</S.Carrinho>
             <S.LogoEfood src={`${logo}`} />
+            <S.Carrinho onClick={openCart}>0 produto(s) no carrinho</S.Carrinho>
           </S.Detalhes>
         </div>
       </S.BannerLayout>

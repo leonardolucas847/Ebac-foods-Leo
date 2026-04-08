@@ -50,7 +50,11 @@ const PratoUnico = ({
     <>
       <S.Card>
         <S.ImageCardapio
-          style={{ backgroundImage: `url(${imagePrato})` }}
+          style={{
+            backgroundImage: `url(${imagePrato})`,
+            height: '167px',
+            width: '304px'
+          }}
         ></S.ImageCardapio>
         <S.TituloCardapio>{tituloPrato}</S.TituloCardapio>
         <S.DescricaoCardapio>{descriptionPrato}</S.DescricaoCardapio>
