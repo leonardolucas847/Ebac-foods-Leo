@@ -61,23 +61,20 @@ const Banner = ({ type }: Props) => {
       <S.BannerLayout
         style={{
           backgroundImage: `url(${FundoGF})`,
-          height: '160px',
-          marginBottom: '300px '
+          height: '162px'
         }}
       >
-        <div>
-          <S.CardImagem>
-            <p className="escrita" style={{ fontWeight: '100' }}>
-              Italiana
-            </p>
-            <p className="escrita">La Dolce Vita Trattoria</p>
-          </S.CardImagem>
-          <S.Detalhes className="container">
-            <S.VoltarHome to="/">Restaurantes</S.VoltarHome>
-            <S.LogoEfood src={`${logo}`} />
-            <S.Carrinho onClick={openCart}>0 produto(s) no carrinho</S.Carrinho>
-          </S.Detalhes>
-        </div>
+        <S.CardImagem>
+          <div className="container ">
+            <p style={{ fontWeight: '100' }}>Italiana</p>
+            <p>La Dolce Vita Trattoria</p>
+          </div>
+        </S.CardImagem>
+        <S.Detalhes className="container">
+          <S.VoltarHome to="/">Restaurantes</S.VoltarHome>
+          <S.LogoEfood src={`${logo}`} />
+          <S.Carrinho onClick={openCart}>0 produto(s) no carrinho</S.Carrinho>
+        </S.Detalhes>
       </S.BannerLayout>
       <Modal
         isOpen={activeModal === 'carrinho'}

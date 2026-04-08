@@ -4,7 +4,8 @@ import imagemBaner from '../../assets/imagem-do-baner.png'
 import { Link } from 'react-router-dom'
 export const BannerLayout = styled.section`
   width: 100%;
-  height: 440px;
+  height: 442px;
+  margin: 0;
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,26 +21,22 @@ export const CardImagem = styled.div`
   transform: translate(-50%, 0);
   width: 100%;
   height: 280px;
-  margin: 0 auto;
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('${imagemBaner}');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  gap: 90px;
-  .escrita {
-    background-color: transparent;
-    margin-left: 16%;
-    display: inline-block;
-    font-size: 32px;
-    color: ${cores.branco};
-    z-index: 99990;
-    position: relative;
+  .container {
     padding-top: 24px;
     padding-bottom: 32px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 150px;
+    font-size: 32px;
+    color: ${cores.branco};
+
     @media (max-width: 1024px) {
       font-size: 24px;
       margin-left: 15%;
@@ -65,14 +62,13 @@ export const Frase = styled.p`
 `
 
 export const LogoEfood = styled.img`
-  height: 64px;
-
-  width: auto;
-
+  height: auto;
+  align-items: center;
+  width: 125px;
+  display: block;
+  margin: auto;
   @media (max-width: 1024px) {
-    left: 26%;
-    top: 20px;
-    height: 48px;
+    width: 110px;
   }
 `
 export const Detalhes = styled.div`
@@ -82,48 +78,37 @@ export const Detalhes = styled.div`
   gap: 32px;
 
   width: 100%;
-  margin: 0 auto;
+  padding-top: 40px;
   align-items: center;
-
-  @media (max-width: 1024px) {
-    display: flex;
-    padding: 20px;
-
-    padding-top: 30px;
-    padding-bottom: 0px;
-    flex-direction: row;
-    align-items: flex;
-  }
+  justify-content: center;
 `
 export const Carrinho = styled.button`
-  text-align: center;
+  align-items: center;
   border: none;
   background-color: transparent;
   font-weight: bold;
   cursor: pointer;
-  justify-content: center;
-  display: inline-block;
+  margin-left: auto;
+  display: block;
   font-size: 18px;
   color: ${cores.vermelho};
   text-decoration: none;
-  text-align: center;
 
-  width: 200px;
-  &:last-child {
-    text-align: right; /* Alinha o texto do segundo link à direita */
+  max-width: 200px;
+  width: auto;
+
+  @media (max-width: 1024px) {
+    padding-right: 8px;
   }
 `
 export const VoltarHome = styled(Link)`
-  justify-content: center;
   display: inline-block;
   font-size: 18px;
   color: ${cores.vermelho};
   text-decoration: none;
-  text-align: center;
-
-  width: 200px;
-  &:last-child {
-    text-align: right; /* Alinha o texto do segundo link à direita */
+  text-align: start;
+  @media (max-width: 1024px) {
+    padding-left: 8px;
   }
 `
 export const Overlay = styled.div`

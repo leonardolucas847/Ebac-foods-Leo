@@ -7,7 +7,6 @@ export const Card = styled.div`
 
   background-color: ${cores.vermelho};
   @media (max-width: 1024px) {
-    width: 90%;
     height: auto;
     margin-bottom: 24px; /* ← separa os cards entre si */
     overflow: hidden;

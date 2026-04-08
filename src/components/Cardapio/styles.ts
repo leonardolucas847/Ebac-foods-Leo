@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
   margin-bottom: 120px;
-  padding-top: 48px;
+  margin-top: 336px;
 `
 export const List = styled.ul`
   display: grid;
